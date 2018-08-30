@@ -1,6 +1,5 @@
-# saas-directory
-
-> My majestic project with Next.js
+# Founderwall.com
+> A no bullshit, curated and categorised list of products, services, tools and resources to help you become a better entrepreneur.
 
 ## Make it works
 
