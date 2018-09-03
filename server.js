@@ -16,7 +16,7 @@ app.prepare().then(() => {
   server.use(bodyParser.json());
 
   // use pages/post.js as /blog/:id
-  server.get("/:category", (req, res) => {
+  server.get("/category/:category", (req, res) => {
     return app.render(
       req,
       res,

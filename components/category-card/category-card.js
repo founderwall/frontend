@@ -14,7 +14,7 @@ const CategoryCard = ({ category, filterQuery = "" }) => {
   return (
     <div className={`card box-shadow ${isHidden ? "fade-out" : ""}`}>
       <div className="card-header">
-        <Link href={`/${category.slug}`}>
+        <Link href={`/category/${category.slug}`}>
           <a>{category.title}</a>
         </Link>
       </div>
