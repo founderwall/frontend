@@ -7,10 +7,12 @@ import ChartistGraph from "react-chartist";
 var simpleLineChartData = {
   color: "blue",
   labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-  series: [[12, 9, 7, 8, 5], [2, 1, 3.5, 7, 3]]
+  series: [[12, 9, 7, 8, 5]]
 };
 
 const options = {
+  low: 0,
+  showArea: true,
   axisX: {
     labelInterpolationFnc: function(value, index) {
       return index % 2 === 0 ? value : null;
@@ -73,20 +75,29 @@ export default class Page extends Component {
             </div>
           </header>
           <main role="main">
-            <section className="jumbotron text-center">
-              <div className="container">
-                <h1 className="jumbotron-heading">Company Name</h1>
-                <p className="lead text-muted">Company summary</p>
-              </div>
-            </section>
             <div className="album py-5 bg-light">
               <div className="container">
+                <div className="page-header">
+                  <h1 className="display-4">Startupific</h1>
+                </div>
+
                 <div className="row">
-                  <div className="col-md-12">
+                  <div className="col-md-6">
                     <div className="card box-shadow">
-                      <div className="card-header">Twitter Health</div>
+                      <div className="card-header">
+                        Twitter <small>@company</small>
+                      </div>
                       <div className="card-body">
-                        <h3>18 / 53</h3>
+                        <div className="card-split-stats">
+                          <div>
+                            <span>Followers</span>
+                            <strong>18</strong>
+                          </div>
+                          <div>
+                            <span>Following</span>
+                            <strong>24</strong>
+                          </div>
+                        </div>
                         <div>
                           {this.state.isLoaded && (
                             <ChartistGraph
@@ -111,11 +122,24 @@ export default class Page extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-12">
+
+                  <div className="col-md-6">
                     <div className="card box-shadow">
-                      <div className="card-header">Instagram Health</div>
+                      <div className="card-header">
+                        Instagram <small>@company_</small>
+                      </div>
                       <div className="card-body">
-                        <h3>230 / 229</h3>
+                        <div className="card-split-stats">
+                          <div>
+                            <span>Followers</span>
+                            <strong>230</strong>
+                          </div>
+                          <div>
+                            <span>Following</span>
+                            <strong>229</strong>
+                          </div>
+                        </div>
+
                         <div>
                           {this.state.isLoaded && (
                             <ChartistGraph
@@ -134,11 +158,124 @@ export default class Page extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-12">
+
+                  <div className="col-md-6">
                     <div className="card box-shadow">
-                      <div className="card-header">LinkedIn Health</div>
+                      <div className="card-header">Github</div>
                       <div className="card-body">
-                        <h3>230 / 229</h3>
+                        <div className="card-split-stats">
+                          <div>
+                            <span>Followers</span>
+                            <strong>18</strong>
+                          </div>
+                          <div>
+                            <span>Following</span>
+                            <strong>24</strong>
+                          </div>
+                        </div>
+                        <div>
+                          {this.state.isLoaded && (
+                            <ChartistGraph
+                              data={{
+                                labels: [
+                                  "Monday",
+                                  "Tuesday",
+                                  "Wednesday",
+                                  "Thursday",
+                                  "Friday"
+                                ],
+                                series: [
+                                  [19, 18, 18, 19, 20],
+                                  [2, 1, 3.5, 7, 3]
+                                ]
+                              }}
+                              options={options}
+                              type={"Line"}
+                            />
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6">
+                    <div className="card box-shadow">
+                      <div className="card-header">Dribbble</div>
+                      <div className="card-body">
+                        <div className="card-split-stats">
+                          <div>
+                            <span>Followers</span>
+                            <strong>230</strong>
+                          </div>
+                          <div>
+                            <span>Following</span>
+                            <strong>229</strong>
+                          </div>
+                        </div>
+
+                        <div>
+                          {this.state.isLoaded && (
+                            <ChartistGraph
+                              data={{
+                                labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+                                series: [
+                                  [200, 198, 205, 202, 210],
+                                  [2, 1, 3.5, 7, 3]
+                                ]
+                              }}
+                              options={options}
+                              type={"Line"}
+                            />
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6">
+                    <div className="card box-shadow">
+                      <div className="card-header">Facebook</div>
+                      <div className="card-body">
+                        <div className="card-split-stats">
+                          <div>
+                            <span>Likes</span>
+                            <strong>1,333</strong>
+                          </div>
+                          <div>
+                            <span>Followers</span>
+                            <strong>987</strong>
+                          </div>
+                        </div>
+
+                        <div>
+                          {this.state.isLoaded && (
+                            <ChartistGraph
+                              data={{
+                                labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+                                series: [
+                                  [200, 198, 205, 202, 210],
+                                  [2, 1, 3.5, 7, 3]
+                                ]
+                              }}
+                              options={options}
+                              type={"Line"}
+                            />
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6">
+                    <div className="card box-shadow">
+                      <div className="card-header">LinkedIn</div>
+                      <div className="card-body">
+                        <div className="card-split-stats">
+                          <div>
+                            <span>Followers</span>
+                            <strong>230</strong>
+                          </div>
+                        </div>
                         <div>
                           {this.state.isLoaded && (
                             <ChartistGraph
@@ -151,11 +288,67 @@ export default class Page extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-12">
+
+                  <div className="col-md-6">
                     <div className="card box-shadow">
                       <div className="card-header">Trustpilot</div>
                       <div className="card-body">
-                        <h3>230 / 229</h3>
+                        <div className="card-split-stats">
+                          <div>
+                            <span>Stars</span>
+                            <strong>4.3</strong>
+                          </div>
+                        </div>
+                        <div>
+                          {this.state.isLoaded && (
+                            <ChartistGraph
+                              data={simpleLineChartData}
+                              options={options}
+                              type={"Line"}
+                            />
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6">
+                    <div className="card box-shadow">
+                      <div className="card-header">Page response time</div>
+                      <div className="card-body">
+                        <div className="card-split-stats">
+                          <div>
+                            <span>Average response time</span>
+                            <strong>2s</strong>
+                          </div>
+                        </div>
+                        <div>
+                          {this.state.isLoaded && (
+                            <ChartistGraph
+                              data={simpleLineChartData}
+                              options={options}
+                              type={"Line"}
+                            />
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6">
+                    <div className="card box-shadow">
+                      <div className="card-header">SEO Rank</div>
+                      <div className="card-body">
+                        <div className="card-split-stats">
+                          <div>
+                            <span>"Golden Boots"</span>
+                            <strong>31</strong>
+                          </div>
+                          <div>
+                            <span>"Golden Shoes"</span>
+                            <strong>39</strong>
+                          </div>
+                        </div>
                         <div>
                           {this.state.isLoaded && (
                             <ChartistGraph
